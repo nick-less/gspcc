@@ -1,0 +1,12 @@
+base=$1
+shift
+if [ -f $base.i ]
+then
+	docc -O -g $base.i $*
+else
+	g++ -DTMS34010 -E -I. -I../foo $base.c > $base.i
+	docc -O -g $base.i $*
+	rm $base.i
+fi
+mix -tc4 -ts4 $base.g > $base.mix
+

@@ -1,0 +1,92 @@
+#######################
+
+PRE_DEC doesn't work
+
+#######################
+
+make as34 chuck Lxxx symbols (?)
+
+####################
+
+Why couldn't we eliminate a13 with md descriptions?
+
+####################
+
+This is a compiler bug:
+
+int main()
+{
+  int i,j;
+  for(i=0;i<10;i++)
+    j = i<<3;
+  printf("j=%d\n",j);
+  return(0);
+}
+
+###################
+
+read tree.def:277: (DECL_VOFFSET) when are the variable offsets used?
+
+###################
+
+Look out for C_PROMOTING_INTEGER_TYPE
+Look at TYPE_PRECISION references.
+
+###################
+
+void bar(int *);
+
+void foo(void)
+{
+	int *p = new int[100];
+	bar(p);
+	delete p;
+}
+
+Why does this pass 4 to builtin_delete?
+
+###################
+
+comments at start of build_delete() are interesting
+
+###################
+
+Can do short labels if RAM is at zero
+
+###################
+
+Retest gsp8.c
+
+###################
+
+in emit_cmp_insn(): look at rtx_cost(x, COMPARE) where CONSTANT_P(x) is true.
+
+###################
+
+short s[16];
+
+int foo(void)
+{
+	borp(s[0]);
+}
+
+Generates poor code.
+
+##################
+
+LEGITIMIZE_ADDRESS()?
+
+##################
+
+why no r->r in movhisi, movqisi?
+
+##################
+
+Put in the abs insn
+
+##################
+
+Recheck the output of ccbfit: the /8's
+
+##################
+
